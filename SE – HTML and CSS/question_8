@@ -1,0 +1,7 @@
+In how many ways can a CSS be integrated as a web page?
+
+Inline CSS: CSS styles are directly applied to individual HTML elements using the style attribute. This method allows you to specify styling within the HTML tag itself.
+
+Internal CSS: CSS styles are defined within the <style> element in the <head> section of an HTML document. This method allows you to apply styles to multiple elements within the same HTML file.
+
+External CSS: CSS styles are placed in a separate CSS file and linked to the HTML document using the <link> element in the <head> section. This method allows you to maintain separate files for HTML and CSS, making your code more organized and easier to manage, especially for larger projects.

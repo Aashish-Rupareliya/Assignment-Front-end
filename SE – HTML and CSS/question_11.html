@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  width: 600px; /* Increased width */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2 {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+legend {
+  padding: 0 10px;
+  color: blue; /* Added color */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: purple; /* Added color */
+}
+
+input[type="text"], input[type="password"], select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <h2>Individual Registration</h2>
+
+  <fieldset>
+    <legend>User Particulars</legend>
+    <label for="login">Login ID</label>
+    <input type="text" id="login" name="login">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <label for="confirm">Confirm Password</label>
+    <input type="password" id="confirm" name="confirm">
+  </fieldset>
+
+  <fieldset>
+    <legend>Personal Particulars</legend>
+    <label for="salutation">Salutation</label>
+    <select id="salutation" name="salutation">
+      <!-- Add the options here -->
+    </select>
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname">
+    <label for="middlename">Middle Name</label>
+    <input type="text" id="middlename" name="middlename">
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname">
+    <label for="residentstatus">Resident Status</label>
+    <select id="residentstatus" name="residentstatus">
+      <!-- Add the options here -->
+    </select>
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <!-- Add the options here -->
+    </select>
+    <label for="email">Email-Id</label>
+    <input type="text" id="email" name="email">
+    <label for="mobile">Mobile Number</label>
+    <input type="text" id="mobile" name="mobile">
+  </fieldset>
+
+  <fieldset>
+    <legend>Account Particulars</legend>
+    <label for="accountno">15 Digit Account No</label>
+    <input type="text" id="accountno" name="accountno">
+    <label for="nickname">Nick Name</label>
+    <input type="text" id="nickname" name="nickname">
+    <label for="fundtransfer">Fund Transfer</label>
+    <select id="fundtransfer" name="fundtransfer">
+      <!-- Add the options here -->
+    </select>
+  </fieldset>
+
+  <p style="color:green;">DECLARATION</p> <!-- Added color -->
+  <p>I have read understood and hereby agree to the Terms and Conditions in respect of all products and channels. I understand that any changes in the terms and conditions applicable to this relationship would be made available to me on request at any IOB branches. I confirm that all accounts under this login name are operated singly and in case of joint account operated by either or survivor / anyone or survivors(s) under his/her joint name respectively. I do hereby declare that information furnished in this form is true to best of my knowledge belief.</p>
+
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>

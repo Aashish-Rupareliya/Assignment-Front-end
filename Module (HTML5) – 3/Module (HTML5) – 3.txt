@@ -1,0 +1,29 @@
+Here are the questions along with their answers:
+
+1. What are the new tags added in HTML5?
+- HTML5 introduced several new semantic elements, including `<header>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<main>`, `<figure>`, and `<figcaption>`. These elements provide more descriptive and meaningful ways to structure content in HTML documents.
+
+2. How to embed audio and video in a webpage?
+- To embed audio and video in a webpage, you can use the `<audio>` and `<video>` elements in HTML5.
+- For audio:
+
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+- For video:
+
+<video controls>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support the video element.
+</video>
+
+- The `controls` attribute adds playback controls (play, pause, volume, etc.) to the audio or video player.
+
+3. Semantic element in HTML5?
+- Semantic elements in HTML5 are tags that convey meaning about the content they contain. They help improve accessibility, search engine optimization (SEO), and code readability. Examples include `<header>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<main>`, `<figure>`, and `<figcaption>`.
+
+4. Canvas and SVG tags
+- `<canvas>`: The `<canvas>` element in HTML5 is used to draw graphics, animations, and interactive content using JavaScript. It provides a drawing surface that can be manipulated dynamically to create visual effects, games, charts, and more.
+- `<svg>`: The `<svg>` element in HTML5 is used to embed scalable vector graphics (SVG) directly into web pages. SVG is an XML-based format for describing two-dimensional vector graphics, and it allows for the creation of high-quality, resolution-independent images and animations.

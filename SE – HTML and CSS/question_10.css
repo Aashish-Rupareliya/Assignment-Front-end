@@ -1,0 +1,20 @@
+/* styles.css */
+a {
+    color: #007bff; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+a:visited {
+    color: #800080; /* Change color for visited links */
+}
+
+a:focus {
+    outline: none; /* Remove default focus outline */
+    color: #ff4500; /* Change color on focus */
+    border-bottom: 2px solid #ff4500; /* Add bottom border on focus */
+}
