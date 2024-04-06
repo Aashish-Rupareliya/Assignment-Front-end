@@ -1,0 +1,40 @@
+<form id="myForm" onsubmit="return validateForm()">
+    Email: <input type="email" id="email" required><br>
+    Number: <input type="number" id="number" required><br>
+    Password: <input type="password" id="password" minlength="8" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+    const email = document.getElementById('email').value;
+    const number = document.getElementById('number').value;
+    const password = document.getElementById('password').value;
+
+    if (!isValidEmail(email)) {
+        alert('Invalid email format');
+        return false;
+    }
+
+    if (!isValidNumber(number)) {
+        alert('Invalid number');
+        return false;
+    }
+
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters');
+        return false;
+    }
+
+    return true;
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidNumber(number) {
+    return !isNaN(number) && number !== '';
+}
+</script>

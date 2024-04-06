@@ -1,0 +1,5 @@
+const arr = [1, 2, 3];
+const notArr = 'Not an array';
+
+console.log(Array.isArray(arr)); // Output: true
+console.log(Array.isArray(notArr)); // Output: false
