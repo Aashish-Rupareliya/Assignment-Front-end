@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Header</title>
+</head>
+<body>
+  <header id="header">
+    <h1>Responsive Header</h1>
+    <nav id="mobileNav" class="mobile-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="toggleNav">Toggle Navigation</button>
+  </header>
+
+  <script>
+    const toggleNavButton = document.getElementById('toggleNav');
+    const mobileNav = document.getElementById('mobileNav');
+
+    toggleNavButton.addEventListener('click', () => {
+      mobileNav.classList.toggle('show-mobile-nav');
+    });
+  </script>
+</body>
+</html>

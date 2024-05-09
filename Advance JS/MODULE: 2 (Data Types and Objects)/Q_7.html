@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Conversion</title>
+</head>
+<body>
+  <script>
+    let user = { name: "John Smith", age: 35 };
+
+    
+    let userJSON = JSON.stringify(user);
+
+   
+    console.log(userJSON); // Output: {"name":"John Smith","age":35}
+
+    
+    let userCopy = JSON.parse(userJSON);
+
+    // Output the parsed object
+    console.log(userCopy); // Output: { name: "John Smith", age: 35 }
+  </script>
+</body>
+</html>

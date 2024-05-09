@@ -1,0 +1,1 @@
+Promises are a feature in JavaScript that allow you to work with asynchronous operations in a more organized and manageable way. They are especially useful when dealing with tasks that take some time to complete, such as fetching data from a server, reading a file, or making an API call.

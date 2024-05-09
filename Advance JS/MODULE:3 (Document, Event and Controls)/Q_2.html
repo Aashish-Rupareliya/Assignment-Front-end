@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector</title>
+</head>
+
+<body>
+    <button id="alertButton">Click Me</button>
+
+    <script>
+
+        const elements = document.querySelectorAll('.myClass');
+
+
+        elements.forEach(element => {
+            element.addEventListener('click', () => {
+                alert('You clicked on an element with the class "myClass"!');
+            });
+        });
+
+
+        const alertButton = document.getElementById('alertButton');
+        alertButton.addEventListener('click', () => {
+            alert('Button clicked! Check console for element click alerts.');
+        });
+    </script>
+</body>
+
+</html>

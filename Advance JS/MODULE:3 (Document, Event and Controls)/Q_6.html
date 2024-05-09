@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider with Swiper</title>
+ 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+  
+    .swiper-container {
+      width: 100%;
+      height: 400px; 
+    }
+
+    .swiper-slide {
+      background-color: #f8f8f8; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+     
+    </div>
+   
+    <div class="swiper-pagination"></div>
+  </div>
+
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    
+    const swiper = new Swiper('.swiper-container', {
+     
+      loop: true, 
+      pagination: {
+        el: '.swiper-pagination', 
+      },
+    });
+  </script>
+</body>
+</html>

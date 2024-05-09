@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Age</title>
+</head>
+<body>
+  <h1>Check Age Function</h1>
+  <button onclick="checkAgePrompt()">Check Age</button>
+
+  <script>
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } else {
+        return confirm('Did parents allow you?');
+      }
+    }
+
+    function checkAgePrompt() {
+      let ageInput = prompt('Enter your age:');
+      if (ageInput === null || isNaN(ageInput)) {
+        alert('Invalid input. Please enter a valid age.');
+        return;
+      }
+
+      let age = parseInt(ageInput, 10);
+      let result = checkAge(age);
+
+      if (result) {
+        alert('You are allowed!');
+      } else {
+        alert('You are not allowed!');
+      }
+    }
+  </script>
+</body>
+</html>
