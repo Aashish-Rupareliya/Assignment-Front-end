@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Booking Form</title>
+  <style>
+    #time, #slot {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Restaurant Booking Form</h1>
+  <form id="bookingForm">
+    <!-- Form fields will be added dynamically here -->
+  </form>
+  <script>
+    // Create form elements
+    const form = document.getElementById('bookingForm');
+
+    // Helper function to create and append input fields
+    const createInput = (type, id, placeholder) => {
+      const input = document.createElement('input');
+      input.type = type;
+      input.id = id;
+      input.placeholder = placeholder;
+      return input;
+    };
+
+    const createSelect = (id, options) => {
+      const select = document.createElement('select');
+      select.id = id;
+      options.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option.value;
+        opt.textContent = option.text;
+        select.appendChild(opt);
+      });
+      return select;
+    };
+
+    const createLabel = (forId, text) => {
+      const label = document.createElement('label');
+      label.htmlFor = forId;
+      label.textContent = text;
+      return label;
+    };
+
+    // Form fields
+    const bookingChoiceOptions = [
+      { value: 'full_day', text: 'Full day booking' },
+      { value: 'half_day', text: 'Half day booking' },
+      { value: 'hourly', text: 'Hourly booking' },
+    ];
+
+    const slotOptions = [
+      { value: 'breakfast', text: 'Breakfast' },
+      { value: 'lunch', text: 'Lunch' },
+      { value: 'dinner', text: 'Dinner' },
+    ];
+
+    const appendField = (field) => {
+      form.appendChild(field);
+    };
+
+    // Create and append booking choice dropdown
+    appendField(createLabel('bookingChoice', 'Choice of booking'));
+    const bookingChoice = createSelect('bookingChoice', bookingChoiceOptions);
+    appendField(bookingChoice);
+
+    // Create and append other form fields
+    appendField(createLabel('userName', 'User Name'));
+    appendField(createInput('text', 'userName', 'Enter your name'));
+
+    appendField(createLabel('mobileNumber', 'Mobile Number'));
+    appendField(createInput('text', 'mobileNumber', 'Enter your mobile number'));
+
+    appendField(createLabel('email', 'Email'));
+    appendField(createInput('email', 'email', 'Enter your email'));
+
+    appendField(createLabel('noOfPerson', 'Number of persons'));
+    appendField(createInput('number', 'noOfPerson', 'Enter number of persons'));
+
+    appendField(createLabel('date', 'Date'));
+    const date = createInput('date', 'date', 'Select date');
+    appendField(date);
+
+    appendField(createLabel('time', 'Time'));
+    const time = createInput('time', 'time', 'Select time');
+    appendField(time);
+
+    appendField(createLabel('slot', 'Slot'));
+    const slot = createSelect('slot', slotOptions);
+    appendField(slot);
+
+    // Event listener for booking choice
+    bookingChoice.addEventListener('change', (e) => {
+      const choice = e.target.value;
+      time.style.display = 'none';
+      slot.style.display = 'none';
+
+      if (choice === 'full_day') {
+        time.style.display = 'none';
+        slot.style.display = 'none';
+      } else if (choice === 'half_day') {
+        slot.style.display = 'block';
+      } else if (choice === 'hourly') {
+        time.style.display = 'block';
+      }
+    });
+
+  </script>
+</body>
+</html>
