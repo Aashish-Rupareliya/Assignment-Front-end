@@ -1,0 +1,38 @@
+In React, components can be created as either class components or functional components. Each type has its own way of managing the component lifecycle. Here's an explanation of both:
+
+Class Component Lifecycle
+Class components in React have a series of lifecycle methods that can be overridden to execute code at specific points in a component's life:
+
+Mounting: When an instance of a component is being created and inserted into the DOM.
+
+constructor(): Called before the component is mounted. It's used to initialize state and bind methods.
+static getDerivedStateFromProps(props, state): Called right before rendering, both on the initial mount and on subsequent updates. It should return an object to update the state or null to update nothing.
+render(): The only required method in a class component. It returns the JSX to be rendered.
+componentDidMount(): Invoked immediately after the component is mounted. It's a good place to initiate API calls and set up subscriptions.
+Updating: When the component is being re-rendered as a result of changes to either its props or state.
+
+static getDerivedStateFromProps(props, state): Same as in the mounting phase.
+shouldComponentUpdate(nextProps, nextState): Determines whether the component should re-render or not. By default, it returns true. It can be used for performance optimization.
+render(): Same as in the mounting phase.
+getSnapshotBeforeUpdate(prevProps, prevState): Called right before the most recently rendered output is committed to the DOM. It can return a value which will be passed as a parameter to componentDidUpdate.
+componentDidUpdate(prevProps, prevState, snapshot): Called immediately after updating occurs. Not called for the initial render.
+Unmounting: When a component is being removed from the DOM.
+
+componentWillUnmount(): Invoked immediately before a component is unmounted and destroyed. Used for cleanup (e.g., invalidating timers, canceling network requests, or cleaning up subscriptions).
+Error Handling: When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
+static getDerivedStateFromError(error): Called when an error is thrown in a descendant component. Used to update the state to display an error boundary.
+componentDidCatch(error, info): Called when an error is thrown in a descendant component. Used to log error information.
+Functional Component with Hooks
+Functional components use Hooks to manage lifecycle events and state. The most commonly used hooks for lifecycle management are useEffect and useState.
+
+Mounting: When the component is being inserted into the DOM.
+
+useEffect(() => { ... }, []): This hook runs after the component is mounted. The empty dependency array [] ensures it runs only once.
+Updating: When the component re-renders due to changes in props or state.
+
+useEffect(() => { ... }, [dependencies]): This hook runs after every render if any value in the dependencies array changes. If you want to perform side effects on every update, omit the dependency array.
+Unmounting: When the component is being removed from the DOM.
+
+useEffect(() => { return () => { ... }; }, []): The function returned by useEffect is the cleanup function, which runs when the component unmounts. The empty dependency array [] ensures this cleanup runs only once when the component unmounts.
+Error Handling: Unlike class components, functional components don't have built-in error boundaries. You need to create an error boundary class component to wrap around your functional component if error handling is required.
