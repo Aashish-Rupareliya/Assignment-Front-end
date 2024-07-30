@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Out Effect</title>
+    <style>
+        .fade-box {
+            width: 200px;
+            height: 100px;
+            background-color: #f1f1f1;
+            line-height: 100px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="fade-container">
+        <div class="fade-box">Fade Out Box</div>
+    </div>
+    <button id="fade-out">Fade Out</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fade-out').click(function() {
+                $('.fade-box').fadeOut(1000);
+            });
+        });
+    </script>
+</body>
+</html>

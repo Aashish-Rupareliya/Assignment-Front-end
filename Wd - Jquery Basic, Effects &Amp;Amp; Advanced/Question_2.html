@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <button id="change-color">Change Background Color</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#change-color').click(function() {
+                const colors = ['#ff9999', '#99ccff', '#ffcc99', '#ccff99'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                $('body').css('background-color', randomColor);
+            });
+        });
+    </script>
+</body>
+</html>

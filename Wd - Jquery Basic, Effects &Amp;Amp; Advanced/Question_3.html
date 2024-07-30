@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <style>
+        .new-element {
+            background-color: #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="create-element">Create Element</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#create-element').click(function() {
+                const newElement = $('<div class="new-element">New Element</div>');
+                $('#container').append(newElement);
+            });
+        });
+    </script>
+</body>
+</html>

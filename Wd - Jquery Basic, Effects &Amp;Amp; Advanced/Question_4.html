@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Another Element</title>
+    <style>
+        .another-element {
+            background-color: #aaa;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="another-container"></div>
+    <button id="create-another-element">Create Another Element</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#create-another-element').click(function() {
+                const anotherElement = $('<div class="another-element">Another Element</div>');
+                $('#another-container').append(anotherElement);
+            });
+        });
+    </script>
+</body>
+</html>
